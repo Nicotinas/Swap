@@ -1,5 +1,5 @@
 [package]
-name = "swap"
+name = "solana-swap"
 version = "0.1.0"
 authors = ["Nicotinas <rhino879@protonmail.com>"]
 edition = "2018"
@@ -14,3 +14,10 @@ solana-program = "=1.6.9"
 [dev-dependencies]
 solana-program-test = "=1.6.9"
 solana-sdk = "=1.6.9"
+
+[features]
+no-entrypoint = []
+
+[lib]
+name = "swap"
+crate-type = ["cdylib", "lib"]
