@@ -53,8 +53,8 @@ async fn test_swap() {
     let greeted_account = banks_client
         .get_account(greeted_pubkey)
         .await
-        .expect("")
-        .expect("");
+        .expect("get account")
+        .expect("Account requrested does not exist");
 
     println!("Greeting = {:?}", greeted_account);
 
